@@ -22,5 +22,5 @@ class MostUsedSkillsView(views.APIView):
     def get(self, request):
         data = Skills.objects.annotate(
             jobs_count=Count('jobs')
-        ).order_by('-jobs_count')[:10].values('name', 'jobs_count')
+        ).order_by('-jobs_count')[:5].values('name', 'jobs_count')
         return Response({"data": data})
