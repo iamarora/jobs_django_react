@@ -31,7 +31,7 @@ const JobForm = ({refreshData}) => {
   const onSubmit = data => {
     axios.post('/jobs/', data)
     .then(function (response) {
-      reset();
+      reset({"title": "", "description": "", "skills": initialSkills});
       refreshData();
     })
     .catch(function (error) {

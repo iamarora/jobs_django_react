@@ -97,7 +97,7 @@ class App extends Component {
             </div>
             <div className="card p-3">
               Jobs list
-              <ul className="list-group list-group-flush border-top-0">
+              <ul className="list-group list-group-flush border-top-0 text-primary" >
                 {this.renderJobs()}
               </ul>
             </div>
